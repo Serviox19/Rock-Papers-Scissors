@@ -1,9 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-</head>
-<body>
+  <title>Rock Papers Scissors Game</title>
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
+
+<body><!-- START BODY -->
+
+<h1>Rock, Papers, Scissors!</h1>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="well">
+        <button type="button" class="btn btn-primary buttonSelection" value="rock">Rock</button>
+        <button type="button" class="btn btn-info buttonSelection" value="paper">Paper</button>
+        <button type="button" class="btn btn-danger buttonSelection" value="scissors">Scissors</button>
+      </div>
+    </div><!-- END COLUMN -->
+    <div class="col-md-8">
+      <div class="well">
+        
+      </div>
+    </div>
+    
+  </div><!-- END ROW -->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="well">
+      <h2>Game Stats!</h2><hr>
+        <div class="score-board">
+          <div><h3>Your Score:&nbsp<span id="userScore"></span></h3></div>
+          <div><h3>Computer Score:&nbsp<span id="computerScore"></span></h3></div>
+          <div><h3>Round Count:&nbsp<span id="roundCount"></span></h3></div>
+        </div>
+      </div>
+    </div><!-- END COLUMN -->
+  </div>
+</div>
+
+
+<!-- END BODY / START JAVASCRIPT & jQUERY -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
