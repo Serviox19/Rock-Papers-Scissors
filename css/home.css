@@ -1,0 +1,42 @@
+#sameChoice{
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#winAlert{
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#loseAlert{
+  width: 40%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  margin-left: 50px;
+  color: red;
+}
+
+h3{
+  text-align: center;
+}
+
+body{
+  background-color: #000;
+}
+
+.notification {
+  font-size: 16px;
+}
+
+.notification .alert {
+  margin-left: auto;
+  margin-right: auto;
+}
