@@ -1,8 +1,8 @@
 $(document).ready(function() {
 // Hide alerts from start
-  $("#sameChoice").hide()
-  $("#winAlert").hide()
-  $("#loseAlert").hide()
+  $("#sameChoice").hide();
+  $("#winAlert").hide();
+  $("#loseAlert").hide();
 
   var gameChoices = ["rock", "paper", "scissors"]
   var userSelection;
@@ -10,7 +10,7 @@ $(document).ready(function() {
   var roundCount = 1;
   var userScore = 0;
   var computerScore =0;
-  
+
 
   //Runs Game on the click!
 
@@ -19,6 +19,10 @@ $(document).ready(function() {
   $("#computerScore").html(computerScore);
 
   $(".buttonSelection").on("click", function () {
+    $("#sameChoice").hide();
+    $("#winAlert").hide();
+    $("#loseAlert").hide();
+
     userSelection = $(this).attr('value');
     computerChoice = Math.floor(Math.random() * gameChoices.length);
 
@@ -73,7 +77,12 @@ $(document).ready(function() {
     $("#loseAlert").show();
   };
 
-  }); 
+  }); // END GAME LOGIC
 
+  $("#reset").on("click", function() {
+    $("#userScore").html(userScore = 0)
+    $("#computerScore").html(computerScore = 0)
+    $("#roundCount").html(roundCount = 1)
+  });
 
 });
