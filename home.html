@@ -14,20 +14,18 @@
 <h1>Rock, Papers, Scissors!</h1><div class="notification">
   <div id="sameChoice" class="alert alert-success alert-dismissible" fade in role="alert" data-toggle="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Same Choice, Nobody Wins!
-</div>
+  </div>
 
-<div id="winAlert" class="alert alert-info alert-dismissible" fade in role="alert" data-toggle="alert">
+  <div id="winAlert" class="alert alert-info alert-dismissible" fade in role="alert" data-toggle="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>You Won!!! So you get a POINT!
-</div>
+  </div>
 
-<div id="loseAlert" class="alert alert-danger alert-dismissible" fade in role="alert" data-toggle="alert">
+  <div id="loseAlert" class="alert alert-danger alert-dismissible" fade in role="alert" data-toggle="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Sorry, Computer was smarter than you this time!!
-</div>
-</div><!-- END NOTIFICATION -->
+  </div>
+  </div><!-- END NOTIFICATION -->
 
 <br>
-
-
 
 
 <div class="container">
@@ -39,10 +37,11 @@
         <button type="button" class="btn btn-warning buttonSelection" value="scissors">Scissors</button>
       </div>
     </div><!-- END COLUMN -->
+
     <div class="col-md-6">
-      <div class="well">
-        
-      </div>
+      <div class="well responsive">
+        <h3>Enjoy the animations under here!</h3>
+      </div><!-- END WELL -->
     </div><!-- END ANIMATION SECTION -->
 
     <div class="col-md-3">
@@ -51,11 +50,12 @@
       </div><!-- END WELL -->
     </div><!-- END LEADERBOARDS COLUMN-->
     
+
   </div><!-- END ROW -->
   <div class="row">
     <div class="col-md-3">
       <div class="well">
-      <h3>Game Stats!</h3><hr>
+      <h3>Game Stats!</h3>
         <div class="score-board">
           <div><h3>Your Score:&nbsp<span id="userScore"></span></h3></div>
           <div><h3>Computer Score:&nbsp<span id="computerScore"></span></h3></div>
@@ -64,8 +64,24 @@
         </div>
       </div>
     </div><!-- END COLUMN -->
-  </div>
-</div>
+
+    <div class="col-md-6">
+      <div class="well responsive">
+        <div class="row fluid">
+          <div class="col-md-4" id="userInput">
+            <img src="images/rock.png">
+          </div>
+          <div class="col-md-4">
+            <img src="images/paper.png">
+          </div>
+          <div class="col-md-4" id="computerInput">
+            <img src="images/scissors.png">
+          </div>
+        </div><!-- END ROW -->
+      </div><!-- END WELL -->
+    </div><!-- END ANIMATION SECTION -->
+  </div><!-- END ROW -->
+</div><!-- END CONTAINER -->
 
 
 
