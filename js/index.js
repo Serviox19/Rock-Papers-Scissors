@@ -20,43 +20,26 @@ $(document).ready(function() {
     userSelection = $(this).attr('value');
     computerChoice = Math.floor(Math.random() * gameChoices.length);
 
-  if (computerChoice === 0 && userSelection === "rock") {
-    roundCount + 1
-    console.log('same choice');
-  };
-
-  if (computerChoice === 1 && userSelection === "paper") {
-    console.log('same choice');
-  };
-
-  if (computerChoice === 2 && userSelection === "scissors") {
-    console.log('same choice');
-  };
-
-  if (computerChoice === 0 && userSelection === "paper") {
-    console.log("You Won");
-  };
-
-  if (computerChoice === 1 && userSelection === "scissors") {
-    console.log("You Won");
-  };
-
-  if (computerChoice === 2 && userSelection === "rock") {
-    console.log("You Won");
-  };
-
-  if (computerChoice == 0 && userSelection === "scissors") {
-    console.log('You Lose');
-  };
-
-  if (computerChoice === 1 && userSelection === "rock") {
-    console.log('You Lose');
-  };
-
-  if (computerChoice === 2 && userSelection === "paper") {
-    console.log('You Lose');
-  };
-
+    if (computerChoice === 0 && userSelection === "rock") {
+      roundCount + 1
+      console.log('same choice');
+    } else if (computerChoice === 1 && userSelection === "paper") {
+      console.log('same choice');
+    } else if (computerChoice === 2 && userSelection === "scissors") {
+      console.log('same choice');
+    } else if (computerChoice === 0 && userSelection === "paper") {
+      console.log("You Won");
+    } else if (computerChoice === 1 && userSelection === "scissors") {
+      console.log("You Won");
+    } else if (computerChoice === 2 && userSelection === "rock") {
+      console.log("You Won");
+    } else if (computerChoice == 0 && userSelection === "scissors") {
+      console.log('You Lose');
+    } else if (computerChoice === 1 && userSelection === "rock") {
+      console.log('You Lose');
+    } else if (computerChoice === 2 && userSelection === "paper") {
+      console.log('You Lose');
+    };
   }); // END GAME LOGIC
 
   $("#reset").on("click", function() {
@@ -64,7 +47,4 @@ $(document).ready(function() {
     $("#computerScore").html(computerScore = 0)
     $("#roundCount").html(roundCount = 1)
   });
-
-
-
 });
