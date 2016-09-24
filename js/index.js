@@ -11,6 +11,22 @@ $(document).ready(function() {
 
   //Runs Game on the click!
 
+  $("#userScore").html(userScore);
+  $("#computerScore").html(computerScore);
+  $("#roundCount").html(roundCount);
+
+  function increaseRound() {
+    roundCount++;
+  };
+
+  function increaseUserScore() {
+    userScore++;
+  };
+
+  function increaseCompScore() {
+    computerScore++;
+  };
+
   $(".buttonSelection").on("click", function () {
 
     userSelection = $(this).attr('value');
@@ -40,28 +56,13 @@ $(document).ready(function() {
     } else if (computerChoice === 2 && userSelection === "paper") {
       console.log('You Lose');
       increaseCompScore();
-    };
+    }
       increaseRound();
-      console.log(roundCount);
-      console.log("Comp Score =" + computerScore);
-      console.log("User Score =" + userScore);
+      $("#userScore").html(userScore);
+      $("#computerScore").html(computerScore);
+      $("#roundCount").html(roundCount);
   }); // END GAME LOGIC
 
-  function increaseRound() {
-    roundCount++;
-  };
-
-  function increaseUserScore() {
-    userScore++;
-  };
-
-  function increaseCompScore() {
-    computerScore++;
-  };
-
-  $("#roundCount").html(roundCount);
-  $("#userScore").html(userScore);
-  $("#computerScore").html(computerScore);
 
   $("#reset").on("click", function() {
     $("#userScore").html(userScore = 0)
