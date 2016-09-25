@@ -3,6 +3,7 @@
 <head>
   <title>Rock Papers Scissors Game</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -11,7 +12,8 @@
 
   <div class="container">
     <div class="row">
-      <h3 id="title">Lets Play Rock, Paper, Scissors!</h3>
+      <h3 id="title">Lets Play Rock, Paper, Scissors!</h3><br>
+      <div data-alerts="alerts"></div>
     </div><!-- END ROW-->
     <div class="row">
       <div class="col-md-3">
@@ -26,20 +28,14 @@
       <div class="col-md-9">
         <div id="results_div">
           <div class="row fluid">
-            <div class="col-md-5" id="userInput">
-            
-            </div>
-            <div class="col-md-2">
-
-            </div>
-            <div class="col-md-5" id="computerInput">
-
-            </div>
+            <div class="col-md-5" id="userInput"></div>
+            <div class="col-md-2"></div>
+            <div class="col-md-5" id="computerInput"></div>
           </div><!-- END ROW -->
         </div><!-- END Results Div -->
       </div><!-- END COL-->
     </div><!-- END ROW-->
-    <div class="row">
+    <div class="row" id="options">
       <div class="col-md-3">
         <button class="btn btn-secondary buttonSelection" value="rock"><i class="fa fa-hand-rock-o" aria-hidden="true"></i></button>
         <button class="btn btn-secondary buttonSelection" value="paper"><i class="fa fa-hand-paper-o" aria-hidden="true"></i></button>
@@ -52,5 +48,7 @@
   <!-- END BODY / START JAVASCRIPT & jQUERY -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
+  <script src="js/jquery.bsAlerts.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
