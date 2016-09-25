@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   //define variables
-
   var gameChoices = ["rock", "paper", "scissors"];
   var userSelection;
   var computerChoice;
@@ -9,12 +8,11 @@ $(document).ready(function() {
   var userScore = 0;
   var computerScore = 0;
 
-  //Runs Game on the click!
-
   $("#userScore").html(userScore);
   $("#computerScore").html(computerScore);
   $("#roundCount").html(roundCount);
 
+  //Runs Game on the click!
   $(".buttonSelection").on("click", function() {
 
     userSelection = $(this).attr('value');
@@ -45,31 +43,38 @@ $(document).ready(function() {
       console.log('you lose');
       increaseCompScore();
     };
-    compPick();
     userPick();
+    compPick();
     increaseRound();
     $("#userScore").html(userScore);
     $("#computerScore").html(computerScore);
     $("#roundCount").html(roundCount);
   }); // END GAME LOGIC
 
-  function compPick() {
-    if (computerChoice === 0) {
-      console.log('comp = rock');
-    } else if (computerChoice === 1) {
-      console.log('comp = paper');
-    } else if (computerChoice === 2) {
-      console.log('comp = scissors');
+  function userPick() {
+    if (userSelection === "rock") {
+      $('#userInput').append('<img class="img-fluid" src="images/rock.png" alt="" />');
+      console.log('user = rock');
+    } else if (userSelection === "paper") {
+      $('#userInput').append('<img class="img-fluid" src="images/paper.png" alt="" />');
+      console.log('user = paper');
+    } else if (userSelection === "scissors") {
+      $('#userInput').append('<img class="img-fluid" src="images/scissors.png" alt="" />');
+      console.log('user = scissors');
     }
   };
 
-  function userPick() {
-    if (userSelection === "rock") {
-      console.log('user = rock');
-    } else if (userSelection === "paper") {
-      console.log('user = paper');
-    } else if (userSelection === "scissors") {
-      console.log('user = scissors');
+
+  function compPick() {
+    if (computerChoice === 0) {
+      $('#computerInput').append('<img class="img-fluid" src="images/rock.png" alt="" />');
+      console.log('comp = rock');
+    } else if (computerChoice === 1) {
+      $('#computerInput').append('<img class="img-fluid" src="images/paper.png" alt="" />');
+      console.log('comp = paper');
+    } else if (computerChoice === 2) {
+      $('#computerInput').append('<img class="img-fluid" src="images/scissors.png" alt="" />');
+      console.log('comp = scissors');
     }
   };
 
