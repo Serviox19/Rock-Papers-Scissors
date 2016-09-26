@@ -93,22 +93,22 @@ $(document).ready(function() {
 
   function userPick() {
     if (userSelection === "rock") {
-      $('#userInput').append('<img class="img-responsive animated slideInLeft" src="images/rock.png" alt="" />');
+      $('#userInput').append('<img class="img-responsive animated slideInLeft" src="images/user-rock.png" alt="" />');
     } else if (userSelection === "paper") {
-      $('#userInput').append('<img class="img-responsive animated slideInLeft" src="images/paper.png" alt="" />');
+      $('#userInput').append('<img class="img-responsive animated slideInLeft" src="images/user-paper.png" alt="" />');
     } else if (userSelection === "scissors") {
-      $('#userInput').append('<img class="img-responsive animated slideInLeft" src="images/scissors.png" alt="" />');
+      $('#userInput').append('<img class="img-responsive animated slideInLeft" src="images/user-scissors.png" alt="" />');
     }
   };
 
 
   function compPick() {
     if (computerChoice === 0) {
-      $('#computerInput').append('<img class="img-responsive animated slideInRight" src="images/rock.png" alt="" />');
+      $('#computerInput').append('<img class="img-responsive animated slideInRight" src="images/comp-rock.png" alt="" />');
     } else if (computerChoice === 1) {
-      $('#computerInput').append('<img class="img-responsive animated slideInRight" src="images/paper.png" alt="" />');
+      $('#computerInput').append('<img class="img-responsive animated slideInRight" src="images/comp-paper.png" alt="" />');
     } else if (computerChoice === 2) {
-      $('#computerInput').append('<img class="img-responsive animated slideInRight" src="images/scissors.png" alt="" />');
+      $('#computerInput').append('<img class="img-responsive animated slideInRight" src="images/comp-scissors.png" alt="" />');
     }
   };
 
