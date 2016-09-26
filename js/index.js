@@ -20,45 +20,38 @@ $(document).ready(function() {
     computerChoice = Math.floor(Math.random() * gameChoices.length);
 
     if (computerChoice === 0 && userSelection === "rock") {
-      console.log('same choice');
       result = 'same';
     } else if (computerChoice === 1 && userSelection === "paper") {
-      console.log('same choice');
       result = 'same';
     } else if (computerChoice === 2 && userSelection === "scissors") {
-      console.log('same choice');
       result = 'same';
     } else if (computerChoice === 0 && userSelection === "paper") {
-      console.log('you won');
       result = 'won';
       increaseUserScore();
     } else if (computerChoice === 1 && userSelection === "scissors") {
-      console.log('you won');
       result = 'won';
       increaseUserScore();
     } else if (computerChoice === 2 && userSelection === "rock") {
-      console.log('you won');
       result = 'won';
       increaseUserScore();
     } else if (computerChoice === 0 && userSelection === "scissors") {
-      console.log('you lose');
       result = 'lose'
       increaseCompScore();
     } else if (computerChoice === 1 && userSelection === "rock") {
-      console.log('you lose');
       result = 'lose';
       increaseCompScore();
     } else if (computerChoice === 2 && userSelection === "paper") {
-      console.log('you lose');
       result = 'lose';
       increaseCompScore();
     };
-    increaseRound();
     animate();
+    increaseRound();
     $("#userScore").html(userScore);
     $("#computerScore").html(computerScore);
     $("#roundCount").html(roundCount);
   }); // END GAME LOGIC
+
+
 
   function animate() {
     setTimeout(function () {
@@ -83,16 +76,20 @@ $(document).ready(function() {
             message: "Same Choice, Try again",
             priority: "info"
           });
-        }
+        };
         console.log(result);
         setTimeout(function () {
-          //reset
           console.log('reset');
           $(document).trigger("clear-alerts");
-        }, 1300);
-      }, 1000);
-    }, 10);
-  }
+          $(function(){
+            $('#userInput').empty();
+            $('#computerInput').empty();
+          });
+          $(".buttonSelection").attr("disabled", false);
+        }, 3500);
+      }, 1400);
+    }, 400);
+  };//End animate
 
   function userPick() {
     if (userSelection === "rock") {
