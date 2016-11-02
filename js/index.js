@@ -27,28 +27,21 @@ $(document).ready(function() {
       result = 'same';
     } else if (computerChoice === 0 && userSelection === "paper") {
       result = 'won';
-      increaseUserScore();
     } else if (computerChoice === 1 && userSelection === "scissors") {
       result = 'won';
-      increaseUserScore();
     } else if (computerChoice === 2 && userSelection === "rock") {
       result = 'won';
-      increaseUserScore();
     } else if (computerChoice === 0 && userSelection === "scissors") {
       result = 'lose'
-      increaseCompScore();
     } else if (computerChoice === 1 && userSelection === "rock") {
       result = 'lose';
-      increaseCompScore();
     } else if (computerChoice === 2 && userSelection === "paper") {
       result = 'lose';
-      increaseCompScore();
     };
-    animate();
-    increaseRound();
     $("#userScore").html(userScore);
     $("#computerScore").html(computerScore);
     $("#roundCount").html(roundCount);
+    animate();
   }); // END GAME LOGIC
 
 
@@ -62,11 +55,13 @@ $(document).ready(function() {
       compPick();
       setTimeout(function () {
         if (result === 'won') {
+          increaseUserScore();
           $(document).trigger("add-alerts", {
             message: "You Won!",
             priority: "success"
           });
         } else if (result === 'lose') {
+          increaseCompScore();
           $(document).trigger("add-alerts", {
             message: "You Lost, Computer was Smarter!",
             priority: "danger"
@@ -80,6 +75,7 @@ $(document).ready(function() {
         console.log(result);
         setTimeout(function () {
           console.log('reset');
+          increaseRound();
           $(document).trigger("clear-alerts");
           $(function(){
             $('#userInput').empty();
